@@ -1,12 +1,8 @@
-/**
- * la interfaz que será común a todos nuestros transportes
- */
 
 public interface IComunTransporte {
 
-
     /**
-     * metodos que deberán ser implementados por todas las clases que implementen la interfaz
+     * metodos que se implementaran a todas las clases que implementen la interfaz
      * @param cp el codigo postal
      * @return un dato de tipo float que será el coste en función del codigo postal introducido
      */

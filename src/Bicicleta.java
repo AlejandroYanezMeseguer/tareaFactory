@@ -1,13 +1,12 @@
 /**
  * Clase bicicleta que implementa la interfaz IComunTransporte
- * @author cristian
- * @version 1.0
+ * @author Alejandro
  */
 
 public class Bicicleta implements IComunTransporte {
 
     /**
-     * atributos finales y estaticos que son el tipo de embalaje
+     * atributos finales y estaticos que indican el tipo de embalaje
      */
     private final static int palet=1;
     private final static int envoltorio_carton=2;
@@ -15,34 +14,31 @@ public class Bicicleta implements IComunTransporte {
 
     /**
      * metodo que calcula el coste del vehiculo en funcion del codigo postal
-     * @param cp que sera el codigo postal
-     * @return el coste del vehiculo en función del codigo que le metamos
+     * @param cp que es el codigo postal
+     * @return el coste del vehiculo en función del codigo que se le indique
      */
     @Override
     public float costeTotal(int cp) {
 
         float coste=0;
         if(cp>10000){
-
             coste=10.50f;
         }
         else if(cp>20000){
-
             coste=20.50f;
         }
         else{
             coste=5f;
         }
-
         return coste;
     }
     /**
-     * metodo que nos devuelve el tipo de embalaje en funcion del peso del transporte
+     * metodo que nos devuelve el tipo de embalaje en funcion del peso transportado
      * @param x dimension x del camion
      * @param y dimension y del camion
      * @param z dimension z del camion
      * @param peso peso del camion
-     * @return nos devolvera el tipo de embalaje en funcion del peso introducido
+     * @return devuelve el tipo de embalaje en funcion del peso introducido
      */
 
     @Override
@@ -51,26 +47,22 @@ public class Bicicleta implements IComunTransporte {
         int aux_tipo_embalaje=0;
 
         if(peso<5){
-
             aux_tipo_embalaje=palet;
-
         }
 
         else if(peso>=5&&peso<10){
-
             aux_tipo_embalaje=envoltorio_carton;
         }
 
         else{
-
             aux_tipo_embalaje=caja_madera;
         }
 
         return aux_tipo_embalaje;
     }
     /**
-     * metodos getter de las static final del tipo de embalaje
-     * @return el tipo de embalaje
+     *  getter de las static final del tipo de embalaje
+     * @return tipo de embalaje
      */
 
     public static int getPalet() {

@@ -2,13 +2,12 @@ import javax.swing.*;
 
 /**
  * Clase camion que implementa la interfaz IComunTransporte
- * @author cristian
- * @version 1.0
+ * @author Alejandro
  */
 public class Camion implements IComunTransporte {
 
     /**
-     * atributos finales y estaticos que son el tipo de embalaje
+     * atributos finales y estaticos que indican el tipo de embalaje
      */
     private final static int palet=1;
     private final static int envoltorio_carton=2;
@@ -24,27 +23,24 @@ public class Camion implements IComunTransporte {
 
         float coste=0;
         if(cp<=10390){
-
            coste=10.50f;
         }
         else if(cp>10390&&cp<=36201){
-
             coste=20.50f;
         }
         else{
             coste=5f;
         }
-
         return coste;
     }
 
     /**
-     * metodo que nos devuelve el tipo de embalaje en funcion del peso del transporte
+     * metodo que devuelve el tipo de embalaje en funcion del peso del transporte
      * @param x dimension x del camion
      * @param y dimension y del camion
      * @param z dimension z del camion
      * @param peso peso del camion
-     * @return nos devolvera el tipo de embalaje en funcion del peso introducido
+     * @return devuelve el tipo de embalaje en funcion del peso indicado
      */
 
     @Override
@@ -53,21 +49,16 @@ public class Camion implements IComunTransporte {
         int aux_tipo_embalaje=0;
 
      if(peso<5){
-
          aux_tipo_embalaje=palet;
-
      }
 
      else if(peso>=5&&peso<10){
-
          aux_tipo_embalaje=envoltorio_carton;
      }
 
      else if(peso>=10){
-
          aux_tipo_embalaje=caja_madera;
      }
-
         return aux_tipo_embalaje;
     }
 

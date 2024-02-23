@@ -1,7 +1,6 @@
 /**
  * Clase factoryTransport que fabrica los objetos de los vehiculos
- * @author cristian
- * @version 1.0
+ * @author Alejandro
  */
 
 public class FactoryTransport {
@@ -27,7 +26,6 @@ public static final int bicicleta=2;
             return new Bicicleta();
         default:
             return null;
-
     }
 
 }
